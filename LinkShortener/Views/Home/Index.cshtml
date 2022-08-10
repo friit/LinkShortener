@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model GenerateLinkViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Generate a shortened link</h1>
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <form id="link" asp-action="Index" method="post">
+        <input asp-for="Link" placeholder="Paste your link here..."/>
+        <button name="button" value="generate">Generate shortened link</button>
+    </form>
+</div>

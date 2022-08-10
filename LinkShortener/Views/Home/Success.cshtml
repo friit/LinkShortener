@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model SuccessViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Your Link has been generated</h1>
+    <a href="@Model.Link">@Model.Link</a>
+    <form asp-action="Success" method="post">
+        <button name="button" value="generate">Generate another link</button>
+    </form>
+</div>
